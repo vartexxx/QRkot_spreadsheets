@@ -1,6 +1,7 @@
 from datetime import datetime
 from typing import Optional
 
+from app.services.constants import MIN_STRING, MAX_STRING
 from pydantic import BaseModel, Extra, Field, PositiveInt
 
 
@@ -11,11 +12,11 @@ class CharityProjectBase(BaseModel):
 
     class Config:
         extra = Extra.forbid
-        BaseModel.Config.min_anystr_length = 1
+        BaseModel.Config.min_anystr_length = MIN_STRING
 
 
 class CharityProjectCreate(CharityProjectBase):
-    name: str = Field(..., max_length=100)
+    name: str = Field(..., max_length=MAX_STRING)
     description: str = Field(...,)
 
 

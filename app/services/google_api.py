@@ -2,18 +2,17 @@ from datetime import datetime
 from typing import List
 
 from aiogoogle import Aiogoogle
-
 from app.core.config import settings
-
-
-FORMAT = "%Y/%m/%d %H:%M:%S"
-VERSION_SHEETS = 'v4'
-VERSION_DRIVE = 'v3'
-SHEET_ID = 0
-TITLE_CLOSE_SPEED = 'Скорость закрытия'
-ROW_COUNT = 100
-COLUMN_COUNT = 11
-LOCALE = 'ru_RU'
+from app.services.constants import (
+    FORMAT,
+    VERSION_SHEETS,
+    VERSION_DRIVE,
+    SHEET_ID,
+    TITLE_CLOSE_SPEED,
+    ROW_COUNT,
+    COLUMN_COUNT,
+    LOCALE
+)
 
 
 async def spreadsheets_create(wrapper_services: Aiogoogle) -> str:
