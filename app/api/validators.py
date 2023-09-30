@@ -1,7 +1,7 @@
 from app.crud.charity_project import charity_project_crud
 from app.models import CharityProject
 from app.services.constants import BAD_REQUEST, NOT_FOUND
-from fastapi import HTTPException, status
+from fastapi import HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 
 
